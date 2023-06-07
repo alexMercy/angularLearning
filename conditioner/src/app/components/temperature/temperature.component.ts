@@ -7,12 +7,12 @@ import {AppService} from "../../app.service";
   styleUrls: ['./temperature.component.css']
 })
 export class TemperatureComponent {
-  temperature$ = this.service.getTemperature;
+  temperature$ = this.service.temperature;
 
   constructor( private service: AppService) {
   }
 
-  toggleTemperature() {
-    this.service.setTemperature = !this.temperature$.value;
+  toggle() {
+    this.service.toggleTemperature();
   }
 }

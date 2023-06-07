@@ -8,8 +8,8 @@ import {AppService} from "../../app.service";
 })
 export class ConditionerComponent {
 
-  public conditioner$ = this.service.getConditioner;
-
-  constructor( private service: AppService) {
-  }
+  // public conditioner$ = this.service.getConditioner;
+  //
+  // constructor( private service: AppService) {
+  // }
 }

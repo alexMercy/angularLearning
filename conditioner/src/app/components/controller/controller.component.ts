@@ -8,13 +8,12 @@ import {AppService} from "../../app.service";
 })
 export class ControllerComponent {
 
-  controller$ = this.service.getController;
+  controller$ = this.service.controller;
 
   constructor( private service: AppService) {
   }
 
-  toggleController() {
-    this.service.setController = !this.controller$.value;
+  toggle() {
+    this.service.toggleController()
   }
-
 }

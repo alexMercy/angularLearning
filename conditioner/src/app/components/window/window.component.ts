@@ -8,12 +8,12 @@ import {AppService} from "../../app.service";
 })
 export class WindowComponent {
 
-  window$ = this.service.getWindow;
+  window$ = this.service.window;
 
   constructor( private service: AppService) {
   }
 
-  toggleWindow() {
-    this.service.setWindow = !this.window$.value;
+  toggle() {
+    this.service.toggleWindow()
   }
 }

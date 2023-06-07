@@ -7,27 +7,31 @@ import {BehaviorSubject} from "rxjs";
 export class AppService {
 
   private _powerSocket = new BehaviorSubject(false);
-  public get getPowerSocket() {return this._powerSocket}
-  public set setPowerSocket(value: boolean) {this._powerSocket.next(value)}
-
+  public powerSocket = this._powerSocket.asObservable();
+  togglePowerSocket() {
+    this._powerSocket.next(!this._powerSocket.value);
+  }
 
   private _window = new BehaviorSubject(false);
-  public get getWindow() {return this._window}
-  public set setWindow(value: boolean) {this._window.next(value)}
-
+  public window = this._window.asObservable();
+  toggleWindow() {
+    this._window.next(!this._window.value);
+  }
 
   private _controller = new BehaviorSubject(false);
-  public get getController() {return this._controller}
-  public set setController(value: boolean) {this._controller.next(value)}
-
+  public controller = this._controller.asObservable();
+  toggleController() {
+  this._controller.next(!this._controller.value)
+  }
 
   private _temperature = new BehaviorSubject(false);
-  public get getTemperature() {return this._temperature}
-  public set setTemperature(value: boolean) {this._temperature.next(value)}
+  public temperature = this._temperature.asObservable();
+  toggleTemperature() {
+    this._temperature.next(!this._temperature.value)
+  }
 
-
-  private _conditioner = new BehaviorSubject(false);
-  public get getConditioner() {return this._conditioner}
+  // conditioner = new BehaviorSubject(false);
+  // public get getConditioner() {return this._conditioner}
 
 
   constructor() { }
