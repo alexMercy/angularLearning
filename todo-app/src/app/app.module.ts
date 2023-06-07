@@ -9,12 +9,18 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './component/header/header.component';
+import { ColumnComponent } from './component/column/column.component';
+import { TaskComponent } from './component/task/task.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ColumnComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
