@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AppService} from "../../app.service";
 
 @Component({
   selector: 'app-window',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class WindowComponent {
 
+  window$ = this.service.getWindow;
+
+  constructor( private service: AppService) {
+  }
+
+  toggleWindow() {
+    this.service.setWindow = !this.window$.value;
+  }
 }

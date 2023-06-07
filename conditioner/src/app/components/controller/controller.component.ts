@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {AppService} from "../../app.service";
 
 @Component({
   selector: 'app-controller',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./controller.component.css']
 })
 export class ControllerComponent {
+
+  controller$ = this.service.getController;
+
+  constructor( private service: AppService) {
+  }
+
+  toggleController() {
+    this.service.setController = !this.controller$.value;
+  }
 
 }

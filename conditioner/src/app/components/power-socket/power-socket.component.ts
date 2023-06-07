@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AppService} from "../../app.service";
 
 @Component({
   selector: 'app-power-socket',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./power-socket.component.css']
 })
 export class PowerSocketComponent {
+  powerSocket$ = this.service.getPowerSocket;
 
+  constructor( private service: AppService) {
+  }
+
+  togglePowerSocket() {
+    this.service.setPowerSocket = !this.powerSocket$.value;
+  }
 }
