@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {AppService} from "../../app.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-conditioner',
@@ -8,7 +9,7 @@ import {AppService} from "../../app.service";
 })
 export class ConditionerComponent {
 
-  public conditioner$ = this.service.conditioner$;
+  public conditioner$: Observable<boolean> = this.service.conditioner$;
 
   constructor( private service: AppService) {
   }
