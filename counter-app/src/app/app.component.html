@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="button-block">
+    <button (click)="decrement()">-1</button>
+    <button (click)="increment()">+1</button>
+    <button (click)="clear()">C</button>
+    <button disabled>{{count$ | async}}</button>
+  </div>
+</div>
+
+
