@@ -7,7 +7,7 @@ import {AppService} from "../../app.service";
   styleUrls: ['./power-socket.component.css']
 })
 export class PowerSocketComponent {
-  powerSocket$ = this.service.powerSocket;
+  powerSocket$ = this.service.powerSocket$;
 
   constructor( private service: AppService) {
   }

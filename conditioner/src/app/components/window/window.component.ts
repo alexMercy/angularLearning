@@ -8,7 +8,7 @@ import {AppService} from "../../app.service";
 })
 export class WindowComponent {
 
-  window$ = this.service.window;
+  window$ = this.service.window$;
 
   constructor( private service: AppService) {
   }

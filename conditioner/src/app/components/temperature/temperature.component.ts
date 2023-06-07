@@ -7,7 +7,7 @@ import {AppService} from "../../app.service";
   styleUrls: ['./temperature.component.css']
 })
 export class TemperatureComponent {
-  temperature$ = this.service.temperature;
+  temperature$ = this.service.temperature$;
 
   constructor( private service: AppService) {
   }

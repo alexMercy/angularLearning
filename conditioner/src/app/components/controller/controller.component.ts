@@ -8,7 +8,7 @@ import {AppService} from "../../app.service";
 })
 export class ControllerComponent {
 
-  controller$ = this.service.controller;
+  controller$ = this.service.controller$;
 
   constructor( private service: AppService) {
   }
