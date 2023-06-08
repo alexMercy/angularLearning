@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './component/header/header.component';
 import { ColumnComponent } from './component/column/column.component';
 import { TaskComponent } from './component/task/task.component';
+import {CdkDrag, CdkDragPlaceholder, CdkDropList, CdkDropListGroup} from "@angular/cdk/drag-drop";
+import { ColumnsComponent } from './component/columns/columns.component';
+import {NzCardModule} from "ng-zorro-antd/card";
 
 registerLocaleData(en);
 
@@ -20,13 +23,19 @@ registerLocaleData(en);
     AppComponent,
     HeaderComponent,
     ColumnComponent,
-    TaskComponent
+    TaskComponent,
+    ColumnsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CdkDropList,
+    NzCardModule,
+    CdkDrag,
+    CdkDropListGroup,
+    CdkDragPlaceholder
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

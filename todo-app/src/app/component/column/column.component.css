@@ -1,0 +1,21 @@
+.column {
+  width: 500px;
+  min-height: 200px;
+  background: aquamarine;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: all 250ms ease-in-out;
+}
+
+.task:last-child {
+  border: none;
+}
+
+.column.cdk-drop-list-dragging .task:not(.cdk-drag-placeholder) {
+  transition: all 250ms ease-in-out;
+}

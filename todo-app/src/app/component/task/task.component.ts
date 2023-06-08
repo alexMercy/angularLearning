@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+
+export interface Task {
+  id: string;
+  title: string;
+  description?: string;
+}
 
 @Component({
   selector: 'app-task',
@@ -6,5 +12,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent {
+  @Input() id = "";
+  @Input() title = "";
+
+
+
 
 }
