@@ -1,8 +1,8 @@
+<span>{{columnData.title}}</span>
 <div cdkDropList class="column"
      [cdkDropListData]="columnData.tasks"
      (cdkDropListDropped)="drop($event)">
   <div  *ngFor="let task of columnData.tasks" class="task" cdkDrag>
     <app-task [id]="task.id" [title]="task.title"></app-task>
   </div>
-
 </div>
